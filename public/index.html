@@ -24,6 +24,35 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+                eblack: '#101010',
+                smtxts: '#6D6D6D',
+                btnbg: '#CDDCF8',
+                searchbd: '#CAD0DD',
+                selectdesc: '#BABABA',
+              },
+
+              width: {
+                '718px': '718px',
+                '150px': '150px',
+                '480px': '480px'
+              },
+
+              fontFamily: {
+                'manrope': ['Manrope']
+              }
+            }
+          }
+        }
+    </script>
+
     <title>React App</title>
   </head>
   <body>
