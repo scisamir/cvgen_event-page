@@ -12,7 +12,7 @@ import event_img5 from './files/event_img5.png'
 import event_img6 from './files/event_img6.png'
 
 function App() {
-  const [dateState, setDateState] = useState(false);
+  const [dateState, setDateState] = useState(true);
   const [cateState, setCateState] = useState(false);
   const [value, onChange] = useState(new Date());
 
