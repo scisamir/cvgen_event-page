@@ -54,7 +54,7 @@ function App() {
 
             <div id="calender" className="mb-6 md:mb-10">
                 <div id="the-calender" className="mb-4">
-                    <input className="h-12 w-80 rounded-lg p-3" type="date" name="" id="" />
+                    <input className="h-12 w-7/12 rounded-lg p-3" type="date" name="" id="" />
                 </div>
                 <p className="text-smtxts font-bold md:font-normal">Click on date to see scheduled event for that day.</p>
             </div>
