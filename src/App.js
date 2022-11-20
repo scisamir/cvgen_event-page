@@ -19,7 +19,7 @@ function App() {
 
   return (
     <div className="bg-eventshome w-full h-full">
-      <h1 className="text-center font-manrope font-semibold md:font-bold text-2xl md:text-3xl lg:text-5xl pt-8">View our Scheduled Events here.</h1>
+      <h1 className="text-center font-manrope font-semibold md:font-bold text-2xl md:text-3xl lg:text-5xl px-4 pt-8">View our Scheduled Events here.</h1>
       <div id="events_page" className="bg-eventshome w-full h-full md:grid md:grid-cols-12 pb-12">
         <div id="md_right_bar" className="md:col-span-5 md:w-80 lg:w-auto p-6 md:p-10">
             <div id="search" className="w-11/12 mb-6 md:mb-10">
