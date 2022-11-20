@@ -18,6 +18,8 @@ function App() {
   const handleCate = () => setCateState(!cateState);
 
   return (
+    <div className="bg-eventshome w-full h-full">
+      <h1 className="text-center font-manrope font-bold text-5xl pt-8">View our Scheduled Events here.</h1>
       <div id="events_page" className="bg-eventshome w-full h-full md:grid md:grid-cols-12 pb-12">
         <div id="md_right_bar" className="md:col-span-5 md:w-80 lg:w-auto p-6 md:p-10">
             <div id="search" className="w-11/12 mb-6 md:mb-10">
@@ -36,7 +38,7 @@ function App() {
                     <span className="mr-6 font-manrope font-bold md:font-semibold text-xl md:text-2xl text-eblack">Date</span>
                     <img src={dropdown} alt="" />
                 </div>
-                <div className={`md:block ${dateState ? "block" : "hidden"}`}>
+                <div className={`${dateState ? "block" : "hidden"}`}>
                   <p className="text-selectdesc mb-4">Select any date</p>
                   <div className="day mb-4 text-smtxts bg-white h-12 w-11/12 py-3 pl-3 rounded-r-lg border-l-blue-600 border-l-4"><span>Today</span></div>
                   <div className="day mb-4 text-smtxts"><span>Tomorrow</span></div>
@@ -50,7 +52,7 @@ function App() {
                     <span className="mr-6 font-manrope font-bold md:font-semibold text-xl md:text-2xl text-eblack">Category</span>
                     <img src={dropdown} alt="" />
                 </div>
-                <div className={`md:block ${cateState ? "block" : "hidden"}`}>
+                <div className={`${cateState ? "block" : "hidden"}`}>
                   <p className="text-selectdesc mb-4">Select any Category</p>
                   <div className="cate-item mb-4 text-smtxts bg-white h-12 w-11/12 py-3 pl-3 rounded-r-lg border-l-blue-600 border-l-4"><span>Convention</span></div>
                   <div className="cate-item mb-4 text-smtxts"><span>Seminar</span></div>
@@ -107,6 +109,8 @@ function App() {
             }} />
         </div>
       </div>
+    </div>
+      
   );
 }
 
