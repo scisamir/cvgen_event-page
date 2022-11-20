@@ -1,6 +1,7 @@
 import './App.css';
 import Events from './components/Events.jsx';
 import { useState } from 'react';
+import Calendar from 'react-calendar';
 import dropdown from './files/dropdown.svg';
 import searchico from './files/searchico.svg';
 import event_img1 from './files/event_img1.png'
@@ -13,6 +14,7 @@ import event_img6 from './files/event_img6.png'
 function App() {
   const [dateState, setDateState] = useState(false);
   const [cateState, setCateState] = useState(false);
+  const [value, onChange] = useState(new Date());
 
   const handleDate = () => setDateState(!dateState);
   const handleCate = () => setCateState(!cateState);
@@ -62,8 +64,8 @@ function App() {
             </div>
 
             <div id="calender" className="mb-6 md:mb-10">
-                <div id="the-calender" className="mb-4">
-                    <input className="h-12 w-7/12 rounded-lg p-3" type="date" name="" id="" />
+                <div id="the-calender" className="w-10/12 mb-4">
+                    <Calendar className="text-center bg-white p-4 rounded-lg" onChange={onChange} value={value} />
                 </div>
                 <p className="text-smtxts font-bold md:font-normal">Click on date to see scheduled event for that day.</p>
             </div>
