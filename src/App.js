@@ -1,5 +1,6 @@
 import './App.css';
 import Events from './components/Events.jsx';
+import { useState } from 'react';
 import dropdown from './files/dropdown.svg';
 import searchico from './files/searchico.svg';
 import event_img1 from './files/event_img1.png'
@@ -10,6 +11,12 @@ import event_img5 from './files/event_img5.png'
 import event_img6 from './files/event_img6.png'
 
 function App() {
+  const [dateState, setDateState] = useState(false);
+  const [cateState, setCateState] = useState(false);
+
+  const handleDate = () => setDateState(!dateState);
+  const handleCate = () => setCateState(!cateState);
+
   return (
       <div id="events_page" className="bg-eventshome w-full h-full md:grid md:grid-cols-12 pb-12">
         <div id="md_right_bar" className="md:col-span-5 md:w-80 lg:w-auto p-6 md:p-10">
@@ -25,25 +32,25 @@ function App() {
             </div>
 
             <div id="date" className="mb-6 md:mb-10">
-                <div className="flex">
+                <div onClick={handleDate} className="flex cursor-pointer">
                     <span className="mr-6 font-manrope font-bold md:font-semibold text-xl md:text-2xl text-eblack">Date</span>
                     <img src={dropdown} alt="" />
                 </div>
-                <div className="hidden md:block">
+                <div className={`md:block ${dateState ? "block" : "hidden"}`}>
                   <p className="text-selectdesc mb-4">Select any date</p>
                   <div className="day mb-4 text-smtxts bg-white h-12 w-11/12 py-3 pl-3 rounded-r-lg border-l-blue-600 border-l-4"><span>Today</span></div>
                   <div className="day mb-4 text-smtxts"><span>Tomorrow</span></div>
                   <div className="day mb-4 text-smtxts"><span>This weekend</span></div>
                 </div>
-                
+
             </div>
 
             <div id="category" className="mb-6 md:mb-10">
-                <div className="flex">
+                <div onClick={handleCate} className="flex cursor-pointer">
                     <span className="mr-6 font-manrope font-bold md:font-semibold text-xl md:text-2xl text-eblack">Category</span>
                     <img src={dropdown} alt="" />
                 </div>
-                <div  className="hidden md:block">
+                <div className={`md:block ${cateState ? "block" : "hidden"}`}>
                   <p className="text-selectdesc mb-4">Select any Category</p>
                   <div className="cate-item mb-4 text-smtxts bg-white h-12 w-11/12 py-3 pl-3 rounded-r-lg border-l-blue-600 border-l-4"><span>Convention</span></div>
                   <div className="cate-item mb-4 text-smtxts"><span>Seminar</span></div>
